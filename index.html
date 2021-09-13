@@ -1,45 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <title>eBay Store</title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- google Playfair font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <!-- custom stylesheet -->
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
-
 <body>
-  <header></header>
-  <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
-          <h1></h1>
+  <!-- header starts here -->
+  <header>
+    <nav class="navbar navbar-default navabr-bg">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand site-logo" href="#">eBay<span>Store</span></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">Products</a></li>
+            <li><a href="#" class="nav-link">Shop</a></li>
+            <li><a href="#" class="nav-link">Blog</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
         </div>
       </div>
+    </nav>
+  </header>
+  <!-- header ends here -->
+  <!-- main starts here -->
+  <main class="main">
+    <!-- search filed starts here -->
+    <div class="search-item">
+      <div class="input-group search-box">
+        <input type="text" class="form-control search-field" placeholder="Search your product">
+        <span class="input-group-btn">
+          <button class="btn search-button btn-success" type="button" id="search-btn" onclick="loadProducts()">Search</button>
+        </span>
+      </div>
+    </div>
+    <!-- search field ends here -->
+    <div class="row">
+      <!-- all Products display starts -->
+      <div class="col-md-9 col-lg-9 col-sm-7">
+        <div id="all-products" class="">
+        </div>
+      </div>
+      <!-- all products display ends -->
+      <!-- cart calculate display stars -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
             <thead>
-              <h1>My-Cart</h1>
+              <h1 class="text-primary">My-Cart</h1>
               <tr>
                 <th scope="col"></th>
                 <th scope="col"></th>
@@ -50,7 +83,7 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <td><span id="total-Products">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -80,16 +113,32 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-primary text-center buy-btn">Buy Now</button>
           </div>
         </div>
       </div>
+      <!-- cart calculate display ends -->
     </div>
   </main>
-  <footer></footer>
-
+  <!-- main ends here -->
+  <!-- footer starts here -->
+  <footer>
+    <div class="container">
+      <div class="footer-area">
+        <div class="footer-link">
+          <a href="#">About us</a>
+          <a href="#">Customer Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="payment-logo">
+          <img src="./images/payment.png" alt="payment-logo">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer ends here -->
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
 </body>
-
 </html>
